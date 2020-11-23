@@ -177,7 +177,17 @@
 	<key>DeviceProperties</key>
 	<dict>
 		<key>Add</key>
-		<dict/>
+		<dict>
+			<key>PciRoot(0x0)/Pci(0x3,0x1)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>class-code</key>
+				<data>/////w==</data>
+				<key>IOName</key>
+				<string>#display</string>
+				<key>name</key>
+				<data>I2Rpc3BsYXk=</data>
+			</dict>
+		</dict>
 		<key>Delete</key>
 		<dict/>
 	</dict>
