@@ -1,4 +1,4 @@
-OC=EFI/OC
+OC := EFI/OC
 
 $(OC)/config.plist: $(OC)/config.tpl.plist serials.txt
 	cp $(OC)/config.tpl.plist $(OC)/config.plist
@@ -9,3 +9,7 @@ $(OC)/config.plist: $(OC)/config.tpl.plist serials.txt
 .PHONY: sync
 sync: $(OC)/config.plist
 	rsync -av --delete EFI $(TARGET)
+
+.PHONY: clean
+clean:
+	rm -f $(OC)/config.plist
