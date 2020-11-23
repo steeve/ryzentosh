@@ -8,3 +8,4 @@ $(OC)/config.plist: $(OC)/config.tpl.plist serials.txt
 
 .PHONY: sync
 sync: $(OC)/config.plist
+	rsync -av --delete EFI $(TARGET)
