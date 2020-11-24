@@ -6,8 +6,11 @@ $(OC)/config.plist: $(OC)/config.tpl.plist serials.txt
 		plutil -replace PlatformInfo.Generic.$${key} -string $$(grep $${key} serials.txt | cut -f2 -d' ') $(OC)/config.plist; \
 	done
 
+.PHONY: config
+config: $(OC)/config.plist
+
 .PHONY: sync
-sync: $(OC)/config.plist
+sync: config
 	rsync -av --delete EFI $(TARGET)
 
 .PHONY: clean
