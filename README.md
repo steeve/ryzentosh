@@ -1,6 +1,6 @@
 # Ryzentosh
-This is the OpenCore configuration for macOS Big Sur 11.0.1 running on the ASUS
-Crosshair VIII Hero (Wi-Fi) X570 motherboard with an AMD Ryzen 3950x and Radeon
+This is the OpenCore configuration for macOS Big Sur 11.1 running on the ASUS
+Crosshair VIII Hero (Wi-Fi) X570 motherboard with an AMD Ryzen 5950x and Radeon
 5500 XT.
 
 All of this was done following the great [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) with the [Ryzen peculiarities]( https://dortania.github.io/OpenCore-Install-Guide/AMD/zen.html#kernel). It is way less complex that it
@@ -9,7 +9,7 @@ seems and is higly a recommended read.
 ## What's working
 | Component                      | Status |    |
 |--------------------------------|:------:|:---|
-| AMD Ryzen 3950x                | ✅     | via [AMD kernel patches](https://github.com/AMD-OSX/AMD_Vanilla/tree/opencore) |
+| AMD Ryzen 5950x                | ✅     | via [AMD kernel patches](https://github.com/AMD-OSX/AMD_Vanilla/tree/opencore) |
 | Processor tempeture, frequency | ✅     | via [SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor) |
 | Sleep                          | ❓     | Unknown as I have no use for it yet |
 | NVMe                           | ✅     | probably via [NVMeFix.kext](https://github.com/acidanthera/NVMeFix) |
@@ -23,7 +23,7 @@ seems and is higly a recommended read.
 | Radeon 5500 XT Audio (DP/HDMI) | ✅     | via via [WhateverGreen.kext](https://github.com/acidanthera/WhateverGreen) |
 
 ## Important GPU information
-I have a GeForce 2080 Ti as the main GPU (first slot), and a Radeon 5500 XT as
+I have a RTX 3090 as the main GPU (first slot), and a Radeon 5500 XT as
 the macOS GPU (second slot). As such, I have disabled the first PCI slot for
 macOS with the following in `DeviceProperties.Add` (you might want to remove
 that depending in your needs):
