@@ -11,6 +11,7 @@ config: $(OC)/config.plist
 
 .PHONY: sync
 sync: config
+	find . -name ".DS_Store" -delete
 	rsync -av --delete EFI $(TARGET)
 
 .PHONY: clean
