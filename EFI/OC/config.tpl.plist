@@ -534,9 +534,9 @@
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
 			<key>SetApfsTrimTimeout</key>
-			<integer>-1</integer>
+			<integer>4294967295</integer>
 			<key>ThirdPartyDrives</key>
-			<false/>
+			<true/>
 			<key>XhciPortLimit</key>
 			<true/>
 		</dict>
