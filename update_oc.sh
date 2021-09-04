@@ -1,12 +1,12 @@
 #!/bin/bash
 
-OPENCORE_VERSION="0.6.8"
-OC_BINARY_DATA_VERSION="ccf3d0c36784100293ccfb2865e10cd37f7a78ee"
-LILU_VERSION="1.5.2"
-VIRTUAL_SMC_VERSION="1.2.2"
-WHATEVERGREEN_VERSION="1.4.9"
-APPLE_ALC_VERSION="1.5.9"
-NVME_FIX_VERSION="1.0.6"
+OPENCORE_VERSION="0.7.2"
+OC_BINARY_DATA_VERSION="dcf5032351154034e7c8ef6fd15674b1c71e3d92"
+LILU_VERSION="1.5.5"
+VIRTUAL_SMC_VERSION="1.2.6"
+WHATEVERGREEN_VERSION="1.5.2"
+APPLE_ALC_VERSION="1.6.3"
+NVME_FIX_VERSION="1.0.9"
 
 
 WORKSPACE="${PWD}"
@@ -35,12 +35,6 @@ function update_opencore() {
     for f in ${OPENCORE_FILES[@]}; do
         cp -f "${repo}/X64/${f}" "${WORKSPACE}/${f}"
     done
-    rm -rf "${repo}"
-}
-
-function update_resources() {
-    repo="$(http_archive_repository https://github.com/acidanthera/OcBinaryData/archive/${OC_BINARY_DATA_VERSION}.zip)"
-    cp -rf "${repo}/OcBinaryData-${OC_BINARY_DATA_VERSION}/Resources" "${WORKSPACE}/EFI/OC"
     rm -rf "${repo}"
 }
 
